@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title></title>
+
+    </head>
+    <body>
+        <h2>Test</h2>  
+        <button id="testbtn">Test</button>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="bundle.js"></script>
+        <script>
+            var items = [
+                {   name:'test',
+                    value:'test'
+                },
+                {
+                    name:'test2',
+                    value:'test2'
+                }
+            ]
+            var sb = new Searchbar({
+                searchAttr: 'value',
+                items:items
+            });
+                $(document).ready(function(){
+                    $('body').append(sb.render());
+                    $('#testbtn').on('click',function(){
+                        console.log(sb.getResults());
+                    });
+
+                    sb.onInput(function(e) {
+                        console.log('inside of callback');
+                        console.log(e.resultSet);
+                    })
+                });
+        </script>
+    </body>
+</html>
