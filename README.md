@@ -5,8 +5,7 @@ The backboneJS searchbar easily implementable. Searches collections and models i
 The BackboneJS search bar is shipped as a view initially, but you specify options on the fly:
 
 
-
-###Sample
+### Sample Code
     var items = [
             {   name:'test',
                 value:'test'
@@ -20,7 +19,7 @@ The BackboneJS search bar is shipped as a view initially, but you specify option
             searchAttr: 'value',
             items:items
         });
-        
+
     // To append to a document on ready    
     $(document).ready(function(){
         $('body').append(sb.render());
