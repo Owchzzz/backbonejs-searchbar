@@ -16,7 +16,7 @@ module.exports = Backbone.Model.extend({
     },
 
     updateCollection(items) {
-        this.collection = new Items(o.items);
+        this.collection = new Items(items);
     },
 
     search() {
