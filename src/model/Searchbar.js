@@ -23,13 +23,9 @@ module.exports = Backbone.Model.extend({
         var term = this.get('term');
         var searchModel = this.get('searchAttr');
         var filter = this.collection.filter(function(model){
-            console.log('filtering: ',model);
-            var vModel = model.get(searchModel);
+            var vModel = model.get(searchModel).toLowerCase();
+            return ~vModel.search(term.toLowerCase());
             
-            if(! vModel.indexOf(term))
-                return true;
-
-            return false;
         })
         this.set('filtered',filter);
         if(this.get('onInputCallback')){

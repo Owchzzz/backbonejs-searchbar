@@ -1,6 +1,6 @@
 {
   "name": "backbonejs-searchbar",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Backbone js searchbar for searching through colllections or even models inside of collection to return a list of all results",
   "main": "./src/index.js",
   "scripts": {
