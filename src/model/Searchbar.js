@@ -19,6 +19,7 @@ module.exports = Backbone.Model.extend({
         var term = this.get('term');
         var searchModel = this.get('searchAttr');
         var filter = this.collection.filter(function(model){
+            console.log('filtering: ',model);
             var vModel = model.get(searchModel);
             
             if(! vModel.indexOf(term))
