@@ -13,6 +13,10 @@ module.exports = Backbone.View.extend({
         _.bindAll(this,'onInput','onChange');
     },
 
+    updateCollection(collection) {
+        this.sb.updateCollection(collection);
+    },
+    
     getResults() {
         return this.sb.get('filtered');
     },

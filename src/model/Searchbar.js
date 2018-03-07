@@ -15,6 +15,10 @@ module.exports = Backbone.Model.extend({
 
     },
 
+    updateCollection(items) {
+        this.collection = new Items(o.items);
+    },
+
     search() {
         var term = this.get('term');
         var searchModel = this.get('searchAttr');
