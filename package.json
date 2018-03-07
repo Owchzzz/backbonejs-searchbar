@@ -1,13 +1,13 @@
 {
   "name": "backbonejs-searchbar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Backbone js searchbar for searching through colllections or even models inside of collection to return a list of all results",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --hot --inline --watch",
     "build": "webpack",
-    "publish": "npm version patch --no-git-tag-version && npm publish"
+    "patch": "npm version patch --no-git-tag-version"
   },
   "repository": {
     "type": "git",
